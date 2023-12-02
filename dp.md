@@ -50,6 +50,74 @@ public class Flyweighted {
 
 -----
 ## Adapter
+- When two or more objects act similar to each other so it's kinda annoying having different objects/interfaces for them
+- So we create a bridge called adapter object
+
+**Example**
+
+Movable Interface
+```
+public interface Movable {
+    public void move();
+}
+public class Car implements Movable {
+    public void move() {
+        System.out.println(“Car is moving”);
+    }
+}
+public class Bike implements Movable {
+    public void move() {
+        System.out.println(“Bike is moving”);
+    }
+}
+```
+Flyable Interface
+```
+public interface Flyable {
+    public void fly();
+}
+public class Airplane implements Flyable {
+    public void fly() {
+        System.out.println(“Airplane is flying”);
+    }
+}
+public class Drone implements Flyable {
+    public void fly() {
+        System.out.println(“Drone is flying”);
+}
+```
+Flyable Adapter Interface
+```
+public class FlyableAdapter implements Movable {
+    Flyable type;
+    public FlyableAdapter(Flyable type) {
+        this.type = type;
+    }
+    public void move() {
+        type.fly();
+    }
+}
+```
+
+Main code
+```
+public class Vehicle {
+    public static void main(String[] args) {
+        List<Movable> mylist = new ArrayList<Movable>();
+        
+        mylist.add(new Car());
+        mylist.add(new Bike());
+        mylist.add(new FlyableAdapter(new Airplane()));
+        mylist.add(new (new Drone()));
+        
+        for(Movable obj: mylist) {
+            obj.move();
+        }
+    }
+}
+```
+
+
 -----
 ## Strategy
 -----
