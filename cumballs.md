@@ -73,3 +73,96 @@ public void name() {...}
 @AfterClass
 public void name() {...}
 ```
+
+------------------------
+# UML Class Notations
+
+- A class is a rectangle divided into three parts
+1. Class **Name**
+2. Class **attributes**
+3. Class **operations**
+- Modifiers
+1. Private : **-**
+2. Public : **+**
+3. Protected : **#**
+4. Static : ***Underlined***
+- Abstract class/methods
+- - Name in ***italics***
+
+! [the image i need](ss.png)
+
+## Drawings required
+
+-----
+
+- Solid arrow with diamond head : **Composition**
+```
+a ---* b
+```
+Here, A is composed of B
+
+-----
+- Solid Arrow with spear head : **Association**
+```
+a ---> b
+```
+here, A holds a reference to B
+
+-----
+
+- Simple solid line : **Binary Association** -> Both Entities know about each other
+```
+a --- b 
+```
+
+-----
+- Dotted Arrow : **Dependency**
+```
+a ...> b
+```
+Here, A is dependent on B. A is requesting service from B
+
+-----
+
+- One rectangle above the other rectangle, and a arrow going upwards : **Inheritance**
+```
+    Mammal
+      ^
+      |
+      |
+     Dog
+   ^     ^
+   |     |
+   |     |
+Poodle Labrador
+```
+
+-----
+
+## Multiplicities
+
+>0..1 : 0 to 1 instance
+>
+>0..* : no limit
+>
+>1    : 1 instance
+>
+>1..* : atleast 1 instance
+
+Example 
+```
+           1..2         1..5
+Customer <------------------  BankAccount
+```
+This means one bank account can have 1 to 2 owners (joint account) and one customer can have 1 to 5 accounts
+
+- UML Exceptions
+```
+                java.lang.Exception
+                        ^
+                        |
+        <<throw>>       |
+MyClass ---------> MyException
+```
+
+
