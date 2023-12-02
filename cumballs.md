@@ -89,7 +89,7 @@ public void name() {...}
 - Abstract class/methods
 - - Name in ***italics***
 
-! [the image i need](ss.png)
+![the image i need](ss.png)
 
 ## Drawings required
 
