@@ -1,5 +1,16 @@
 # JUnit Notes (shitty ahh)
 
+## Contents
+- [Boilerplate code for JUnit runner Class](#boilerplate-code-for-junit-runner-class)
+- [A few JUnit Assertion Methods](#a-few-junit-assertion-methods)
+- [Test with a timeout](#test-with-a-timeout)
+- [Test for exceptions](#test-for-exceptions)
+- [Setup and Teardown](#setup-and-teardown)
+- [UML Class Notations](#uml-class-notations)
+- [Drawings required](#drawings-required)
+- [Multiplicities](#multiplicities)
+
+
 ## Boilerplate code for JUnit runner Class
 
 ```
